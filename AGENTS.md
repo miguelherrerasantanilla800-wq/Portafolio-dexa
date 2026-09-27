@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project decisions
+
+- Keep DEXA as a single scrolling marketing page because the approved brief explicitly requires smooth section navigation.
+- Use CSS interface compositions and reserved media areas only; the client will add all imagery later.
