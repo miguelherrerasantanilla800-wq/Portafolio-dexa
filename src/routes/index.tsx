@@ -57,6 +57,13 @@ const projects = [
   { number: "03", tag: "Sistema empresarial", title: "Gestión más inteligente", text: "Software personalizado para organizar procesos y simplificar el trabajo diario." },
 ];
 
+const processSteps = [
+  { icon: Lightbulb, title: "Descubrimos", text: "Entendemos tu idea, necesidades y objetivos." },
+  { icon: PenTool, title: "Diseñamos", text: "Convertimos las ideas en una experiencia visual clara." },
+  { icon: Code2, title: "Desarrollamos", text: "Construimos una solución funcional, rápida y escalable." },
+  { icon: Rocket, title: "Lanzamos", text: "Publicamos y dejamos tu producto listo para crecer." },
+];
+
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -179,7 +186,7 @@ function Index() {
             <SectionIntro eyebrow="Nuestro proceso" title="De la idea al producto." text="Un proceso claro, colaborativo y enfocado en avanzar con propósito en cada etapa." />
             <div className="relative mt-16 grid gap-8 md:grid-cols-4">
               <div className="absolute left-[12.5%] right-[12.5%] top-5 hidden h-px bg-border md:block" />
-              {[['Lightbulb', Lightbulb, 'Descubrimos', 'Entendemos tu idea, necesidades y objetivos.'], ['PenTool', PenTool, 'Diseñamos', 'Convertimos las ideas en una experiencia visual clara.'], ['Code2', Code2, 'Desarrollamos', 'Construimos una solución funcional, rápida y escalable.'], ['Rocket', Rocket, 'Lanzamos', 'Publicamos y dejamos tu producto listo para crecer.']].map(([, Icon, title, text], index) => <article key={title as string} className="relative"><div className="grid size-10 place-items-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-button"><Icon className="size-4" /></div><span className="mt-7 block text-xs font-bold text-primary">0{index + 1}</span><h3 className="mt-2 text-lg font-bold text-brand-deep">{title as string}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text as string}</p></article>)}
+              {processSteps.map(({ icon: Icon, title, text }, index) => <article key={title} className="relative"><div className="grid size-10 place-items-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-button"><Icon className="size-4" /></div><span className="mt-7 block text-xs font-bold text-primary">0{index + 1}</span><h3 className="mt-2 text-lg font-bold text-brand-deep">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p></article>)}
             </div>
           </div>
         </section>
